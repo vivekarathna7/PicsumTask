@@ -32,6 +32,7 @@ class PicsListViewController: BaseViewController {
     }
 
     private func setupUI() {
+        self.title = "Picsum"
         self.tableView.registerCell(type: PicsListCell.self)
         self.tableView.dataSource = self
         self.tableView.delegate = self
@@ -60,7 +61,18 @@ class PicsListViewController: BaseViewController {
 
 extension PicsListViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        
+        if let isSelected = viewModel.picsList?[indexPath.row].isSelected, isSelected {
+            let storyBoard : UIStoryboard = UIStoryboard(name: "Main", bundle:nil)
+            let detailView = storyBoard.instantiateViewController(withIdentifier: "PicsDetailViewController") as! PicsDetailViewController
+            detailView.pic = viewModel.picsList?[indexPath.row]
+            self.navigationController?.pushViewController(detailView, animated: true)
+        }
+        else {
+            let alert = UIAlertController(title: "Picsum", message: "Please select picture to procees", preferredStyle: .alert)
+            let okAction = UIAlertAction(title: "Ok", style: .default)
+            alert.addAction(okAction)
+            self.present(alert, animated: true)
+        }
     }
 }
 
