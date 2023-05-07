@@ -30,6 +30,7 @@
 		E2620C282A079880008E4BC7 /* ServiceManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2620C1C2A079880008E4BC7 /* ServiceManager.swift */; };
 		E2B8CE3E2A07D3400081D66E /* PicsListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2B8CE3C2A07D3400081D66E /* PicsListCell.swift */; };
 		E2B8CE3F2A07D3400081D66E /* PicsListCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E2B8CE3D2A07D3400081D66E /* PicsListCell.xib */; };
+		E2B8CE412A07E55D0081D66E /* PicsDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2B8CE402A07E55D0081D66E /* PicsDetailViewController.swift */; };
 		F0002ABEF8AADB661683B360 /* Pods_PicsumTaskTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2FAA089780DE641530C539B1 /* Pods_PicsumTaskTests.framework */; };
 		FD3CB411C6A1C045C7894F58 /* Pods_PicsumTask.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 60E583FD80D7B51E548B2B23 /* Pods_PicsumTask.framework */; };
 /* End PBXBuildFile section */
@@ -87,6 +88,7 @@
 		E2620C1C2A079880008E4BC7 /* ServiceManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ServiceManager.swift; sourceTree = "<group>"; };
 		E2B8CE3C2A07D3400081D66E /* PicsListCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PicsListCell.swift; sourceTree = "<group>"; };
 		E2B8CE3D2A07D3400081D66E /* PicsListCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PicsListCell.xib; sourceTree = "<group>"; };
+		E2B8CE402A07E55D0081D66E /* PicsDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PicsDetailViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -127,7 +129,6 @@
 				4186628708A17964C329339C /* Pods-PicsumTaskTests.debug.xcconfig */,
 				C121D54A043E6DDF2ED8D65C /* Pods-PicsumTaskTests.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -201,6 +202,7 @@
 		E2620BFD2A078F31008E4BC7 /* PicsDetailView */ = {
 			isa = PBXGroup;
 			children = (
+				E2B8CE402A07E55D0081D66E /* PicsDetailViewController.swift */,
 			);
 			path = PicsDetailView;
 			sourceTree = "<group>";
@@ -529,6 +531,7 @@
 				E2620C222A079880008E4BC7 /* Loader.swift in Sources */,
 				E2620C072A078F31008E4BC7 /* Pics.swift in Sources */,
 				E2620C082A078F31008E4BC7 /* PicsListViewModel.swift in Sources */,
+				E2B8CE412A07E55D0081D66E /* PicsDetailViewController.swift in Sources */,
 				E2620C282A079880008E4BC7 /* ServiceManager.swift in Sources */,
 				E2620C092A078F31008E4BC7 /* PicsListViewController.swift in Sources */,
 				E2620C252A079880008E4BC7 /* HTTPMethod.swift in Sources */,

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="EUe-js-IO6">
     <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
@@ -9,6 +9,22 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
+        <!--Navigation Controller-->
+        <scene sceneID="buz-Kz-ur4">
+            <objects>
+                <navigationController id="EUe-js-IO6" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="AW7-9R-9Ti">
+                        <rect key="frame" x="0.0" y="59" width="393" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="Hcb-NE-lX3"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="71k-Pb-VdS" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1387" y="-39"/>
+        </scene>
         <!--Pics List View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
@@ -18,7 +34,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="qkW-CQ-bCw">
-                                <rect key="frame" x="0.0" y="75" width="393" height="743"/>
+                                <rect key="frame" x="0.0" y="119" width="393" height="699"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                             </tableView>
                         </subviews>
@@ -31,13 +47,48 @@
                             <constraint firstItem="qkW-CQ-bCw" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="UY4-Mj-YR4"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="6O9-Ew-2b8"/>
                     <connections>
                         <outlet property="tableView" destination="qkW-CQ-bCw" id="l0R-26-6FB"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="46.564885496183201" y="-2.1126760563380285"/>
+            <point key="canvasLocation" x="-605" y="-39"/>
+        </scene>
+        <!--Pics Detail View Controller-->
+        <scene sceneID="a0E-sX-NDh">
+            <objects>
+                <viewController id="j4G-Fw-l21" customClass="PicsDetailViewController" customModule="PicsumTask" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="77a-aM-HLP">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <wkWebView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="h3s-4H-J2X">
+                                <rect key="frame" x="0.0" y="59" width="393" height="759"/>
+                                <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <wkWebViewConfiguration key="configuration">
+                                    <audiovisualMediaTypes key="mediaTypesRequiringUserActionForPlayback" none="YES"/>
+                                    <wkPreferences key="preferences"/>
+                                </wkWebViewConfiguration>
+                            </wkWebView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="yyM-os-OzI"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="h3s-4H-J2X" firstAttribute="top" secondItem="yyM-os-OzI" secondAttribute="top" id="4Ai-in-tiB"/>
+                            <constraint firstAttribute="trailing" secondItem="h3s-4H-J2X" secondAttribute="trailing" id="Dnf-MN-IBm"/>
+                            <constraint firstItem="h3s-4H-J2X" firstAttribute="leading" secondItem="77a-aM-HLP" secondAttribute="leading" id="e6R-ap-wvz"/>
+                            <constraint firstItem="yyM-os-OzI" firstAttribute="bottom" secondItem="h3s-4H-J2X" secondAttribute="bottom" id="k9J-K6-meK"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="webView" destination="h3s-4H-J2X" id="HTc-FW-DTg"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ELZ-iM-MTs" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="188.54961832061068" y="-39.436619718309863"/>
         </scene>
     </scenes>
     <resources>
