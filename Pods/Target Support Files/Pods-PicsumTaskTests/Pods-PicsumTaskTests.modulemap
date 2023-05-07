@@ -1,0 +1,6 @@
+framework module Pods_PicsumTaskTests {
+  umbrella header "Pods-PicsumTaskTests-umbrella.h"
+
+  export *
+  module * { export * }
+}
