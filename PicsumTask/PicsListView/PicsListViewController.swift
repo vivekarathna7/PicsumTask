@@ -35,11 +35,19 @@ class PicsListViewController: BaseViewController {
         sender.isSelected = !sender.isSelected
         viewModel.picsList?[sender.tag].isSelected = sender.isSelected
     }
+    
+    func getAspectRatioAccordingToiPhones(cellImageFrame: CGSize, downloadedImage: UIImage) -> CGFloat {
+        let widthOffset = downloadedImage.size.width - cellImageFrame.width
+        let widthOffsetPercentage = (widthOffset*100)/downloadedImage.size.width
+        let heightOffset = (widthOffsetPercentage * downloadedImage.size.height)/100
+        let effectiveHeight = downloadedImage.size.height - heightOffset
+        return(effectiveHeight)
+    }
 }
 
 extension PicsListViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-
+        
     }
 }
 
@@ -56,6 +64,18 @@ extension PicsListViewController: UITableViewDataSource {
         cell.checkBoxBtn.addTarget(self, action: #selector(checkBoxAction(sender: )), for: .touchUpInside)
         cell.setPic(pic: pic)
         cell.checkBoxBtn.isSelected = pic.isSelected ?? false
+        
+        var cellFrame = cell.frame.size
+        cellFrame.height =  cellFrame.height - 15
+        cellFrame.width =  cellFrame.width - 15
+        if let url = URL(string: pic.downloadUrl) {
+            //            picImageView.sd_setImage(with: url, completed: nil)
+            cell.picImageView.sd_setImage(with: url, placeholderImage: nil, options: [], completed: { (theImage, error, cache, url) in
+                self.tableView.beginUpdates()
+                cell.imageHeightContraint.constant = self.getAspectRatioAccordingToiPhones(cellImageFrame: cellFrame,downloadedImage: theImage!)
+                self.tableView.endUpdates()
+            })
+        }
         
         return cell
     }

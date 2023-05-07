@@ -65,6 +65,7 @@
             <connections>
                 <outlet property="checkBoxBtn" destination="2Jr-bY-9tS" id="TIg-KV-ofM"/>
                 <outlet property="descLbl" destination="jE9-CM-QdW" id="qQE-4V-OvY"/>
+                <outlet property="imageHeightContraint" destination="Xy7-UT-dmD" id="wTe-YI-GHT"/>
                 <outlet property="picImageView" destination="pGm-d9-v0g" id="Ri7-ZG-GcY"/>
                 <outlet property="titleLbl" destination="Li6-P9-pbC" id="GNf-hS-t0p"/>
             </connections>

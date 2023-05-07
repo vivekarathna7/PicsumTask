@@ -11,6 +11,7 @@ import SDWebImage
 class PicsListCell: UITableViewCell {
     @IBOutlet weak var descLbl: UILabel!
     
+    @IBOutlet weak var imageHeightContraint: NSLayoutConstraint!
     @IBOutlet weak var checkBoxBtn: UIButton!
     @IBOutlet weak var picImageView: UIImageView!
     @IBOutlet weak var titleLbl: UILabel!
@@ -28,9 +29,6 @@ class PicsListCell: UITableViewCell {
     }
     
     func setPic(pic: Pics) {
-        if let url = URL(string: pic.downloadUrl) {
-            picImageView.sd_setImage(with: url, completed: nil)
-        }
         titleLbl.text = pic.author
         descLbl.text = pic.url
     }
