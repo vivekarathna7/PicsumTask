@@ -11,16 +11,22 @@ class PicsListViewController: BaseViewController {
 
     private var viewModel = PicsListViewModel()
     @IBOutlet weak var tableView: UITableView!
+    let refreshControl = UIRefreshControl()
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
         setupUI()
         showLoader()
+        fetchPics()
+    }
+    
+    private func fetchPics() {
         self.viewModel.picsLoaded = { [weak self] (_, success) in
             self?.hideLoader()
             if success {
                 self?.tableView.reloadData()
+                self?.refreshControl.endRefreshing()
             }
         }
     }
@@ -29,6 +35,13 @@ class PicsListViewController: BaseViewController {
         self.tableView.registerCell(type: PicsListCell.self)
         self.tableView.dataSource = self
         self.tableView.delegate = self
+        refreshControl.attributedTitle = NSAttributedString(string: "Pull to refresh")
+           refreshControl.addTarget(self, action: #selector(self.refresh(_:)), for: .valueChanged)
+           tableView.addSubview(refreshControl)
+    }
+    
+    @objc func refresh(_ sender: AnyObject) {
+        viewModel.callService()
     }
     
     @objc func checkBoxAction(sender: UIButton) {
@@ -69,7 +82,6 @@ extension PicsListViewController: UITableViewDataSource {
         cellFrame.height =  cellFrame.height - 15
         cellFrame.width =  cellFrame.width - 15
         if let url = URL(string: pic.downloadUrl) {
-            //            picImageView.sd_setImage(with: url, completed: nil)
             cell.picImageView.sd_setImage(with: url, placeholderImage: nil, options: [], completed: { (theImage, error, cache, url) in
                 self.tableView.beginUpdates()
                 cell.imageHeightContraint.constant = self.getAspectRatioAccordingToiPhones(cellImageFrame: cellFrame,downloadedImage: theImage!)

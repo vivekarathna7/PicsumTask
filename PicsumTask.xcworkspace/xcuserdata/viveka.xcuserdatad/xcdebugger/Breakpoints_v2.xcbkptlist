@@ -7,97 +7,17 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "53E0A8E0-4789-4360-8C1C-E31CDED801AB"
+            uuid = "670B02AC-F2FF-40EB-B173-4B21AC8161B3"
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "PicsumTask/PicsListView/PicsListViewModel.swift"
+            filePath = "PicsumTask/PicsListView/PicsListViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "15"
-            endingLineNumber = "15"
-            landmarkName = "callService()"
+            startingLineNumber = "44"
+            endingLineNumber = "44"
+            landmarkName = "refresh(_:)"
             landmarkType = "7">
-            <Locations>
-               <Location
-                  uuid = "53E0A8E0-4789-4360-8C1C-E31CDED801AB - f445d8c8beac6e66"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "PicsumTask.PicsListViewModel.callService() -&gt; ()"
-                  moduleName = "PicsumTask"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/viveka/Documents/GitHub/PicsumTask/PicsumTask/PicsListView/PicsListViewModel.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "15"
-                  endingLineNumber = "15"
-                  offsetFromSymbolStart = "48">
-               </Location>
-               <Location
-                  uuid = "53E0A8E0-4789-4360-8C1C-E31CDED801AB - 11f785efbaa046ab"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "closure #1 (Swift.Array&lt;PicsumTask.Pics&gt;) -&gt; () in PicsumTask.PicsListViewModel.callService() -&gt; ()"
-                  moduleName = "PicsumTask"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/viveka/Documents/GitHub/PicsumTask/PicsumTask/PicsListView/PicsListViewModel.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "15"
-                  endingLineNumber = "15"
-                  offsetFromSymbolStart = "32">
-               </Location>
-            </Locations>
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "05200328-86D8-4F82-A293-72CAAD31B52B"
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "PicsumTask/Services/Managers/ServiceManager.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "15"
-            endingLineNumber = "15"
-            landmarkName = "callService(urlString:method:success:fail:)"
-            landmarkType = "7">
-            <Locations>
-               <Location
-                  uuid = "05200328-86D8-4F82-A293-72CAAD31B52B - dba19daa34c22741"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "PicsumTask.ServiceManager.callService&lt;&#x3c4;_0_0 where &#x3c4;_0_0: Swift.Decodable&gt;(urlString: Swift.String, method: PicsumTask.HTTPMethod, success: (&#x3c4;_0_0) -&gt; (), fail: (PicsumTask.HTTPError) -&gt; ()) -&gt; ()"
-                  moduleName = "PicsumTask"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/viveka/Documents/GitHub/PicsumTask/PicsumTask/Services/Managers/ServiceManager.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "15"
-                  endingLineNumber = "15"
-                  offsetFromSymbolStart = "536">
-               </Location>
-               <Location
-                  uuid = "05200328-86D8-4F82-A293-72CAAD31B52B - dba19daa34c22741"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "PicsumTask.ServiceManager.callService&lt;&#x3c4;_0_0 where &#x3c4;_0_0: Swift.Decodable&gt;(urlString: Swift.String, method: PicsumTask.HTTPMethod, success: (&#x3c4;_0_0) -&gt; (), fail: (PicsumTask.HTTPError) -&gt; ()) -&gt; ()"
-                  moduleName = "PicsumTask"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/viveka/Documents/GitHub/PicsumTask/PicsumTask/Services/Managers/ServiceManager.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "15"
-                  endingLineNumber = "15"
-                  offsetFromSymbolStart = "604">
-               </Location>
-            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>
