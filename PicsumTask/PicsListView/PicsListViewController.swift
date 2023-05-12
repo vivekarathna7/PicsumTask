@@ -96,7 +96,9 @@ extension PicsListViewController: UITableViewDataSource {
         if let url = URL(string: pic.downloadUrl) {
             cell.picImageView.sd_setImage(with: url, placeholderImage: nil, options: [], completed: { (theImage, error, cache, url) in
                 self.tableView.beginUpdates()
-                cell.imageHeightContraint.constant = self.getAspectRatioAccordingToiPhones(cellImageFrame: cellFrame,downloadedImage: theImage!)
+                if let image = theImage {
+                    cell.imageHeightContraint.constant = self.getAspectRatioAccordingToiPhones(cellImageFrame: cellFrame,downloadedImage: image)
+                }
                 self.tableView.endUpdates()
             })
         }
